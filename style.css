@@ -1,0 +1,142 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #010039;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  padding: 20px;
+  background-color: #00000000;
+  border-bottom: 2px solid #007bff;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  color: #007bff;
+  text-shadow: 0 0 15px #007bff;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Card */
+.card {
+  background-color: #0D0D0D00;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+  position: relative;
+  width: 240px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Gambar */
+img {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #007bff;
+}
+
+/* Tombol Copy */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #007bff, #00bfff);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.5), inset 0 0 10px #007bff;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(145deg, #00bfff, #007bff);
+  box-shadow: 0 0 35px rgba(0, 191, 255, 0.8), inset 0 0 15px #00bfff;
+  transform: scale(1.1);
+  animation: pulse 1s infinite;
+}
+
+/* Tombol Preview */
+.preview-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: linear-gradient(145deg, #001f3f, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.4), inset 0 0 10px #0056b3;
+  transition: all 0.3s ease;
+}
+
+.preview-btn:hover {
+  background: linear-gradient(145deg, #0056b3, #001f3f);
+  box-shadow: 0 0 45px rgba(0, 123, 255, 0.9), inset 0 0 20px #007bff;
+  transform: scale(1.15) rotate(1deg);
+  animation: pulse 1s infinite;
+}
+
+/* Animasi Pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 191, 255, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  }
+}
+
+/* Notifikasi */
+#notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(145deg, #007bff, #00bfff);
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 123, 255, 0.8);
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  z-index: 1000;
+}
